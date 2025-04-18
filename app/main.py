@@ -19,7 +19,7 @@ class IntegerRange:
             raise TypeError
         if not (self.min_amount <= value <= self.max_amount):
             raise ValueError
-        setattr(instance, self.name, value)
+        instance.__dict__[self.name] = value
 
 
 class Visitor:
